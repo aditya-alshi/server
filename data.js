@@ -5,7 +5,7 @@
     from: { email: "john.doe@example.com", name: "John Doe" },
     date: 1728441600000, // 2024-10-10
     subject: "Meeting reminder",
-    short_description: "Reminder for the meeting at 10 AM."
+    short_description: "Reminder for the important meeting at 10 AM."
   },
   {
     id: 2,
