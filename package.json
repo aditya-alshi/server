@@ -1,12 +1,6 @@
 {
-    "name": "email-server-app",
-    "version": "0.1.0",
-    "dependencies": {
-      "cors": "^2.8.5",
-      "express": "^4.21.1"
-    },
-    "scripts": {
-      "start": "node start.js"
-    }
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
   }
-  
+}
