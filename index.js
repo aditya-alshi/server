@@ -6,7 +6,6 @@ const { emailList, emailBodies } = require('./data')
 app.use(cors());
 
 app.get('/', (req, res) => {
-    console.log("hello")
     const page = parseInt(req.query.page);
     const id = parseInt(req.query.id)
     if(id) {
