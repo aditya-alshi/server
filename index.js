@@ -7,26 +7,28 @@ app.use(cors());
 
 app.get('/', (req, res) => {
     const page = parseInt(req.query.page);
-    const id = parseInt(req.query.id)
-    if(id) {
-        const emailBody = emailBodies.find(eb => eb.id === id)
-        res.status(200).json(emailBody)
+    const id = parseInt(req.query.id);
+    
+    if (id) {
+        const emailBody = emailBodies.find(eb => eb.id === id);
+        return res.status(200).json(emailBody);
     }
-    if(page && page === 1) {
-        res.status(200).json({
+
+    if (page && page === 1) {
+        return res.status(200).json({
             list: emailList.slice(0, 10)
-        })
-    } else if(page && page === 2) {
-        res.status(200).json({
+        });
+    } else if (page && page === 2) {
+        return res.status(200).json({
             list: emailList.slice(10)
-        })
+        });
     }
 
-    res.json({
-        messgae: "test the joker"
-    })
+    return res.json({
+        message: "Hello server"
+    });
+});
 
-})
 
 app.listen(process.env.PORT || 3000 , () => {
     console.log("listening at port : ");
