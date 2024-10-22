@@ -12,15 +12,19 @@ app.get('/', (req, res) => {
         const emailBody = emailBodies.find(eb => eb.id === id)
         res.status(200).json(emailBody)
     }
-    if(page === 1) {
+    if(page && page === 1) {
         res.status(200).json({
             list: emailList.slice(0, 10)
         })
-    } else if(page === 2) {
+    } else if(page && page === 2) {
         res.status(200).json({
             list: emailList.slice(10)
         })
     }
+
+    res.json({
+        messgae: "test the joker"
+    })
 
 })
 
