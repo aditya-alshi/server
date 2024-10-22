@@ -24,9 +24,9 @@ app.get('/', (req, res) => {
         });
     }
 
-    return res.json({
-        message: "Hello server"
-    });
+    return res.status(200).json({
+        list: emailList
+    });;
 });
 
 
