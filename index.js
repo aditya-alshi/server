@@ -6,25 +6,21 @@ const cors = require('cors')
 app.use(cors());
 
 app.get('/', (req, res) => {
-    // const page = parseInt(req.query.page);
-    // const id = parseInt(req.query.id)
-    // if(id) {
-    //     const emailBody = emailBodies.find(eb => eb.id === id)
-    //     res.status(200).json(emailBody)
-    // }
-    // if(page === 1) {
-    //     res.status(200).json({
-    //         list: emailList.slice(0, 10)
-    //     })
-    // } else if(page === 2) {
-    //     res.status(200).json({
-    //         list: emailList.slice(10)
-    //     })
-    // }
-
-    res.json({
-        messgae: "test the joker"
-    })
+    const page = parseInt(req.query.page);
+    const id = parseInt(req.query.id)
+    if(id) {
+        const emailBody = emailBodies.find(eb => eb.id === id)
+        res.status(200).json(emailBody)
+    }
+    if(page === 1) {
+        res.status(200).json({
+            list: emailList.slice(0, 10)
+        })
+    } else if(page === 2) {
+        res.status(200).json({
+            list: emailList.slice(10)
+        })
+    }
 
 })
 
