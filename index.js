@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors')
-// const { emailList, emailBodies } = require('./data')
+const { emailList, emailBodies } = require('./data')
 
 app.use(cors());
 
