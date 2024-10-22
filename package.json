@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "vercel build && node index.js"
+    "build": "npm run build && node index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
